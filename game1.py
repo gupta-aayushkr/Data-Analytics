@@ -27,6 +27,16 @@ def player_update():
         p.y -= 5
     if keyboard.down:
         p.y += 5
+    
+    #player moment
+    if p.x > w:
+        p.x = 0
+    if p.y > h:
+        p.y = 0
+    if p.x < 0:
+        p.x = w
+    if p.y < 0:
+        p.y = h
 
 def enemy_update():
     e.x += 5
